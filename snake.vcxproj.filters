@@ -21,9 +21,6 @@
     <ClCompile Include="apple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="point.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="snake.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -38,16 +35,16 @@
     <ClInclude Include="apple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="shape.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="snake.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="direction.h">
+    <ClInclude Include="goldenApple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="goldenApple.h">
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="direction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

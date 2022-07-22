@@ -1,20 +1,5 @@
 
-#include"raylib.h"
-#include<iostream>
-#include"apple.h"
-#include"shape.h"
-#include<vector>
-#include"snake.h"
-#include"direction.h"
-#include<string>
-#include"goldenApple.h"
-
-void cheackMove(dir& d);
-bool play();
-void sleep();
-void gameOver(snake& p, dir d);
-void checkEat(snake& p, apple& a, goldenApple& g);
-using namespace std;
+#include"main.h"
 
 int main()
 {
@@ -37,6 +22,7 @@ int main()
 	return 0;
 }
 
+//game loop
 bool play()
 {
 	apple a(RED, 800 / 10, 600 / 10, 10);
@@ -59,15 +45,14 @@ bool play()
 		checkEat(p, a, g);
 		getOut = p.isGameOver(d);
 		p.movePlayer(d);
-		//getOut = p.isGameOver(d);
-		DrawText((to_string(p.getScore())).c_str(), 700, 10, 20, WHITE);
+		DrawText((std::to_string(p.getScore())).c_str(), 700, 10, 20, WHITE);
 		DrawFPS(10, 10);
 		EndDrawing();
 	}
 	gameOver(p, d);
 	return false;
 }
-
+//check if apple was eating be the snake
 void checkEat(snake& p, apple& a, goldenApple& g)
 {
 	if (CheckCollisionCircleRec(Vector2{ (float)a.getCol() * 10 , (float)a.getRow() * 10 }, a.getRadius(), p.getRec()))
@@ -83,6 +68,7 @@ void checkEat(snake& p, apple& a, goldenApple& g)
 	}
 }
 
+//activated when game is over
 void gameOver(snake& p, dir d)
 {
 	p.movePlayer(d);
@@ -92,13 +78,14 @@ void gameOver(snake& p, dir d)
 	EndDrawing();
 	sleep();
 }
-
+//creat a delay
 void sleep()
 {
 	double time = GetTime() + 1;
 	while (time > GetTime()) {}
 }
 
+//look for move from the player
 void cheackMove(dir &d)
 {
 	if (IsKeyPressed(KEY_W) && d != dir::down)

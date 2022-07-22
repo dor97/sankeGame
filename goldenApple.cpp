@@ -1,6 +1,6 @@
 
 #include"goldenApple.h"
-
+//a counter for how long the golden apple should stay on the screen and off the screen
 void goldenApple::countOneDown()
 {
 	--coun;

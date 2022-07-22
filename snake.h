@@ -9,10 +9,10 @@ class snake :public point {
 	int width, hight;
 	Color color = GREEN;
 	std::vector<std::pair<int, int>> player;
-	int size = 1;
+	int size = 1;			//snake size
 	int score = 0;
-	bool sizeUp = false;
-	int val = 10;
+	bool sizeUp = false;	//increase the size of the snake
+	int val = 10;			//speed of the snake
 
 public:
 	snake(int screenWidth, int screenHight, int width, int hight) : screenHight(screenHight), screenWidth(screenWidth), width(width), hight(hight) { player.push_back(std::make_pair(screenHight * 10 / 2, screenWidth * 10 / 2)); }

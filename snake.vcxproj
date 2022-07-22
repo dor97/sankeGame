@@ -142,15 +142,14 @@
     <ClCompile Include="apple.cpp" />
     <ClCompile Include="goldenApple.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="point.cpp" />
     <ClCompile Include="snake.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="apple.h" />
     <ClInclude Include="direction.h" />
     <ClInclude Include="goldenApple.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="point.h" />
-    <ClInclude Include="shape.h" />
     <ClInclude Include="snake.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
