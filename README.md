@@ -1,3 +1,3 @@
 # sankeGame
 
-A GUI snake game using Raylib
+A snake game builded using Raylib
